@@ -2,7 +2,14 @@ import firebase_admin
 from firebase_admin import credentials, firestore
 from datetime import datetime
 
-cred = credentials.Certificate("firebase/serviceAccountKey.json")
+firebase_key = os.getenv("FIREBASE_SERVICE_ACCOUNT")
+
+if not firebase_key:
+    raise Exception("FIREBASE_SERVICE_ACCOUNT env variable not set")
+
+firebase_dict = json.loads(firebase_key)
+
+cred = credentials.Certificate(firebase_dict)
 
 if not firebase_admin._apps:
     firebase_admin.initialize_app(cred)
