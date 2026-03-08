@@ -1,0 +1,131 @@
+
+# JEWELRY (Core + Variants)
+
+
+jewelery,jewellery,jewelry
+jewel,jewels
+ornament,ornaments,jewelry
+bling,jewelry
+accessory jewelry,jewelry
+
+# Specific Jewelry Types
+earring,earrings,stud,studs,hoop,hoops
+pendent,pendant,locket,necklace,necklaces,chain,chains
+bracelet,bracelets,bangle,bangles,kada,kadas
+ring,rings,band,bands
+anklet,anklets,payal
+brooch,brooches,pin,pins
+nosepin,nose pin,nosepins
+
+# Gender variations
+women jewelry,womens jewelry,ladies jewelry, women gold jewelry, women silver jewelry 
+men jewelry,mens jewelry,male jewelry, men gold jewelry,men silver jewelry
+kids jewelry,kids jewellery,child jewelry,children jewelry
+
+
+# ACCESSORIES (All Genders)
+
+accessory,accessories
+fashion accessory,fashion accessories
+belt,belts
+wallet,wallets
+handbag,handbags,bag,bags
+purse,purses
+clutch,clutches
+sling bag,sling bags
+backpack,backpacks
+cap,caps,hat,hats
+scarf,scarves,stole,stoles
+glove,gloves
+sunglass,sunglasses,shades
+watch,watches,timepiece,timepieces
+tie,ties
+cufflink,cufflinks
+hair accessory,hair accessories,hairband,hairbands
+hair clip,hair clips
+hair pin,hair pins
+
+
+# DRESSES (All Genders)
+
+dress,dresses,gown,gowns
+maxi dress,maxi dresses
+mini dress,mini dresses
+midi dress,midi dresses
+ethnic dress,ethnic wear
+party dress,party dresses
+casual dress,casual dresses
+
+# Women
+kurta,kurtas,kurti,kurtis
+lehenga,lehengas
+saree,sarees,sari,saris
+salwar,salwars
+anarkali,anarkalis
+tunic,tunics
+top,tops
+skirt,skirts
+
+# Men (Dress-like apparel)
+suit,suits
+blazer,blazers
+jacket,jackets
+coat,coats
+sherwani,sherwanis
+kurta pajama,kurta pyjama
+formal wear,formalwear
+ethnic menswear
+
+# Kids
+kids dress,kids dresses
+frock,frocks
+romper,rompers
+jumpsuit,jumpsuits
+kids kurta,kids kurti
+
+# BEAUTY PRODUCTS
+
+beauty product,beauty products
+cosmetic,cosmetics
+skincare,skin care
+haircare,hair care
+fragrance,fragrances
+perfume,perfumes,deodorant,deodorants,deo
+body spray,body sprays
+face wash,facewash
+cleanser,cleansers
+moisturizer,moisturizers
+cream,creams
+lotion,lotions
+serum,serums
+sunscreen,sun screen
+
+# MAKEUP PRODUCTS
+
+makeup,make up
+foundation,foundations
+concealer,concealers
+compact,compacts
+powder,powders
+lipstick,lipsticks
+lip gloss,lip glosses
+lip balm,lip balms
+mascara,mascaras
+eyeliner,eye liner,eyeliners
+kajal,kohls
+blush,blushes
+highlighter,highlighters
+bronzer,bronzers
+nail polish,nailpolish,nail paints
+makeup kit,makeup kits
+beauty kit,beauty kits
+
+# Common Misspellings
+
+earings,earrings
+jewelary,jewelry
+makup,makeup
+perfum,perfume
+accessary,accessory
+cosmatics,cosmetics
+sandles, sandals

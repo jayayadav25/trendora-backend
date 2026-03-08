@@ -1,0 +1,160 @@
+# Trendora AI Recommendation & Search Backend
+
+Production-ready AI backend powering the Trendora eCommerce app.
+
+This system provides:
+
+- Product search
+- Personalized recommendations
+- Learning-to-rank ranking
+- Exploration vs exploitation
+- Hybrid recommendation system
+- Firebase product integration
+
+---
+
+# Architecture
+
+Flutter App
+↓
+FastAPI Backend
+↓
+Search Pipeline
+├ Elasticsearch Retrieval
+├ Business Ranking
+├ Learning-to-Rank (LightGBM)
+├ Exploration (Bandit Strategy)
+↓
+Recommendation System
+├ Content-Based Filtering
+├ Top-K Similar Products
+↓
+Firebase Firestore (Product Storage)
+
+---
+
+# Features
+
+## 1 Search System
+- Elasticsearch BM25 search
+- Query intent detection
+- Price filters
+- Category filters
+- Sub-category filters
+- Faceted search
+
+Example endpoint:
+
+GET /search?q=women shoes
+
+---
+
+## 2 Recommendation System
+
+Content-based recommendation using product features.
+
+Uses:
+
+- TF-IDF embeddings
+- cosine similarity
+- Top-K similar products cache
+
+Endpoint:
+
+GET /recommendations?last_viewed_product_id=123
+
+---
+
+## 3 Similar Product Recommendation
+
+Used on product detail page.
+
+Endpoint:
+
+GET /products/{product_id}/similar
+
+---
+
+## 4 Learning to Rank (LTR)
+
+Ranking model trained with:
+
+LightGBM Ranker
+
+Features used:
+
+- Elasticsearch relevance score
+- Product popularity
+- Average rating
+- Discount
+
+---
+
+## 5 Exploration vs Exploitation
+
+Multi-Armed Bandit system used to balance:
+
+- best products
+- new products
+- diverse categories
+
+---
+
+## 6 Tracking System
+
+User behavior logging for future ML training.
+
+Endpoints:
+
+POST /track/search  
+POST /track/click  
+POST /track/cart  
+
+Stored in Firebase.
+
+---
+
+# API Endpoints
+
+## Product APIs
+
+GET /products  
+GET /products/{product_id}
+
+Used by Flutter to fetch product cards and details.
+
+---
+
+## Search API
+
+GET /search
+
+Example:
+
+/search?q=men jackets&min_price=1000&max_price=5000
+
+Supports:
+
+- price filters
+- category filters
+- sub-category filters
+- rating filters
+
+---
+
+## Recommendation APIs
+
+GET /recommendations  
+GET /products/{product_id}/similar
+
+---
+
+## Tracking APIs
+
+POST /track/search  
+POST /track/click  
+POST /track/cart  
+
+---
+
+

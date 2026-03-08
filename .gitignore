@@ -1,0 +1,44 @@
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc.*
+*.so
+
+# Virtual Environment
+
+venv/
+.env/
+.env.local
+
+# Large ML Artifacts
+models/*.npy
+models/*.bin
+models/*.parquet
+models/*.pkl
+models/*.npz
+
+# Dataset files
+data/
+dataset/
+*.json
+*.csv
+
+# Firebase Secret Keys
+firebase/serviceAccountKey.json
+
+# Logs
+*.log
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Cache
+.cache/
