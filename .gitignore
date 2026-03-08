@@ -16,9 +16,8 @@ venv/
 # Large ML Artifacts
 models/*.npy
 models/*.bin
-models/*.parquet
-models/*.pkl
-models/*.npz
+
+
 
 # Dataset files
 data/
