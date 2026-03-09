@@ -1,24 +1,24 @@
 import os
 import json
-from dotenv import load_dotenv
+import base64
 import firebase_admin
 from firebase_admin import credentials, firestore
 from datetime import datetime
 
 cred = None
 
-# 1️⃣ Try Render environment variable
-firebase_key = os.getenv("FIREBASE_SERVICE_ACCOUNT")
+# Try Base64 environment variable (Render)
+firebase_base64 = os.getenv("FIREBASE_SERVICE_ACCOUNT_BASE64")
 
-if firebase_key:
-    firebase_dict = json.loads(firebase_key)
+if firebase_base64:
+    firebase_json = base64.b64decode(firebase_base64).decode("utf-8")
+    firebase_dict = json.loads(firebase_json)
     cred = credentials.Certificate(firebase_dict)
 
-# 2️⃣ Otherwise use local JSON file
+# Fallback to local file
 else:
     cred = credentials.Certificate("firebase/serviceAccountKey.json")
 
-# Initialize Firebase
 if not firebase_admin._apps:
     firebase_admin.initialize_app(cred)
 
