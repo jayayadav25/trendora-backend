@@ -1,18 +1,24 @@
 import os
 import json
+from dotenv import load_dotenv
 import firebase_admin
 from firebase_admin import credentials, firestore
 from datetime import datetime
 
+cred = None
+
+# 1️⃣ Try Render environment variable
 firebase_key = os.getenv("FIREBASE_SERVICE_ACCOUNT")
 
-if not firebase_key:
-    raise Exception("FIREBASE_SERVICE_ACCOUNT env variable not set")
+if firebase_key:
+    firebase_dict = json.loads(firebase_key)
+    cred = credentials.Certificate(firebase_dict)
 
-firebase_dict = json.loads(firebase_key)
+# 2️⃣ Otherwise use local JSON file
+else:
+    cred = credentials.Certificate("firebase/serviceAccountKey.json")
 
-cred = credentials.Certificate(firebase_dict)
-
+# Initialize Firebase
 if not firebase_admin._apps:
     firebase_admin.initialize_app(cred)
 
